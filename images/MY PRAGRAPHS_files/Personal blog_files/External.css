@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+}
+h1{ color: red;background-color: cyan;
+
+}
+#About{
+    color: blue;
+}
+header{
+    text-align: center;background-color: #00a5b0;
+ color: #c30052}
+footer{ background-color: #00a5b0;text-align: center;
+
+}
+
+p{
+    font-size: 20px;
+}
+#para{
+    border:blue solid;
+    padding: 20px; margin: 0px;
+}
+
+#contact{background-color: aquamarine}
+.content{
+    max-width: 800px;
+    margin: 50px auto;
+    border: purple solid ;
+    border-radius: 20px;
+
+}

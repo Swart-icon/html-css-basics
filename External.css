@@ -1,0 +1,37 @@
+
+*{margin:0;
+padding:0;
+box-sizing:border-box; }
+body{
+    font-family: "URW Bookman";
+    background-color: lemonchiffon;}
+h2{color: darkorange}
+#money{text-align: center}
+header{background-color: aqua;
+text-align: center;padding:20px;border-radius: 50px}
+footer{background-color: cadetblue}
+nav ul{display: flex;
+justify-content: center; gap: 20px;
+list-style-type: none}
+nav ul li{display:  inline}
+nav ul li a{text-decoration: none;
+text-decoration-color: blueviolet;
+padding: 10px 20px;
+border-radius:10px}
+section{background-color:pink;padding:60px 20px;
+    margin:40px auto;
+    max-width:800px;
+    border:solid 2px lightcoral;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px hotpink;
+    text-align: center;
+}
+p{color: white;font-weight: bold}
+h3{color: yellow}
+nav ul li a:hover{background-color: deepskyblue;
+margin:10px}
+#re{color:white;font-weight: bold;list-style-type: none}
+footer{border-bottom: 5px solid lemonchiffon;
+text-align:center;
+padding:30px 20px;
+margin-top:40px}

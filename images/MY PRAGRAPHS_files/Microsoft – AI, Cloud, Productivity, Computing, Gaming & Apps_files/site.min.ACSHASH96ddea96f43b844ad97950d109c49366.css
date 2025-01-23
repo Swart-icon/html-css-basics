@@ -1,0 +1,15 @@
+.cta-font-normal{font-weight:normal !important}
+.alert-full-bleed[class*="bg-"] .alert-content a{color:#fff;word-break:break-word}
+.alert.bg-alt-blue .alert-content a,.alert.bg-light-blue .alert-content a{word-break:break-word;color:#000}
+@media(min-width:768px){.alert-display-more{display:none}
+.alert-description-truncated{display:none}
+.btn.btn-collapse.alert-btn{display:none}
+}
+@media(max-width:768px){.alert-content.btn-flex-direction{display:flex;flex-direction:row-reverse}
+.btn.btn-collapse.alert-btn{transform:rotate(180deg);display:block;margin-bottom:auto}
+.btn.btn-collapse.alert-btn.expanded{transform:rotate(0)}
+.alert-description-full{display:none}
+.alert-description-full.active{display:block}
+.text-truncated{display:none}
+.text-truncated.active{display:block}
+}

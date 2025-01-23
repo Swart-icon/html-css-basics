@@ -1,0 +1,6 @@
+.content-card .card-body .sr-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal !important}
+.mtv-vertical-center-first-card .row>div:first-of-type .material-card{background-color:#0067b8;color:#fff}
+.mtv-vertical-center-first-card .row>div:first-of-type .material-card .card-body{flex:unset}
+.mtv-vertical-center-first-card .row>div:first-of-type .material-card .link-group a{display:block;text-decoration:none;color:#fff}
+.mtv-vertical-center-first-card .row>div:first-of-type .material-card .link-group a:focus{border:2px solid transparent;outline:1px solid transparent;outline-offset:-3px;border-color:#fff;outline-color:rgba(0,0,0,.6)}
+html:not([dir=rtl]) .mtv-vertical-center-first-card .row>div:first-of-type .link-group a{margin-right:unset}

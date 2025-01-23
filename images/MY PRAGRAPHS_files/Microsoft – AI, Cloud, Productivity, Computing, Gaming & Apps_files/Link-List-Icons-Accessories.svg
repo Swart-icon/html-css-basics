@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1a1a1a;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="MSCOM_Icons" data-name="MSCOM Icons">
+    <g id="Link-List-Icons-Accessories">
+      <g id="Bounding_Box" data-name="Bounding Box">
+        <rect class="cls-2" width="120" height="120"/>
+      </g>
+      <g id="Accessories_Icon" data-name="Accessories Icon">
+        <path class="cls-1" d="M92.54,71.98h-.69c-9.63,0-17.47-7.84-17.47-17.47v-21.89c0-.06,0-.13,0-.2,0-6.56,5.33-11.89,11.89-11.89h11.86c6.56,0,11.89,5.33,11.89,11.89v22.09c0,9.63-7.84,17.47-17.47,17.47ZM78.37,32.24c0,.06,0,.12,0,.18v22.09c0,7.43,6.04,13.47,13.47,13.47h.69c7.43,0,13.47-6.04,13.47-13.47v-22.09c0-4.35-3.54-7.89-7.89-7.89h-11.86c-4.29,0-7.79,3.44-7.89,7.71Z"/>
+        <path class="cls-1" d="M92.17,40.19c-1.1,0-2-.9-2-2v-15.66c0-1.1.9-2,2-2s2,.9,2,2v15.66c0,1.1-.9,2-2,2Z"/>
+        <path class="cls-1" d="M80.97,99.48H18.73c-4.82,0-8.74-3.92-8.74-8.74v-37.74c0-4.82,3.92-8.74,8.74-8.74h51.06c1.1,0,2,.9,2,2s-.9,2-2,2H18.73c-2.61,0-4.74,2.13-4.74,4.74v37.74c0,2.61,2.13,4.74,4.74,4.74h62.24c2.61,0,4.74-2.13,4.74-4.74v-14.74c0-1.1.9-2,2-2s2,.9,2,2v14.74c0,4.82-3.92,8.74-8.74,8.74Z"/>
+        <path class="cls-1" d="M71.38,87.23H28.04c-1.1,0-2-.9-2-2s.9-2,2-2h43.35c1.1,0,2,.9,2,2s-.9,2-2,2Z"/>
+        <circle class="cls-1" cx="68.26" cy="71.86" r="2"/>
+        <circle class="cls-1" cx="56.05" cy="71.86" r="2"/>
+        <circle class="cls-1" cx="43.84" cy="71.86" r="2"/>
+        <circle class="cls-1" cx="31.63" cy="71.86" r="2"/>
+        <circle class="cls-1" cx="62.15" cy="59.75" r="2"/>
+        <circle class="cls-1" cx="49.94" cy="59.75" r="2"/>
+        <circle class="cls-1" cx="37.73" cy="59.75" r="2"/>
+        <circle class="cls-1" cx="25.52" cy="59.75" r="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

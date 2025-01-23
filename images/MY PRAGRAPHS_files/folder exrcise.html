@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>folder exrcise</title>
+
+</head>
+<body>
+<h1>student registration file</h1>
+<fieldset>
+    <legend>personal information</legend>
+    <label>Name:</label>
+    <input type="text" name="" required="" value="Evans"><br>
+    <label>Email:</label>
+    <input type="email" email="email" value="user@gmail.com"><br>
+    <label>Phone number:</label>
+    <input type="number" number="number"><br>
+    <label>Date of birth:</label>
+    <input type="date" id="date of birth" name="date of birth"><br>
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="male" checked="checked">
+    <label for="male">male</label>
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="female">female</label><br>
+</fieldset>
+<fieldset>
+    <legend>Contact Information</legend>
+    <lable>Address:</lable><br>
+    <textarea cols="30" rows="5"></textarea><br>
+    <lable>Location:</lable>
+    <select>
+        <option selected="selected">Nairobi</option>
+        <option>Busia</option>
+        <option>Meru</option>
+
+    </select>
+</fieldset>
+<fieldset>
+    <legend>Course selection</legend>
+    <lable>Choose a course:</lable>
+    <select>
+        <option selected="selected">web development</option>
+        <option>cyber security</option>
+    </select><br>
+    <lable>preferrd learning mode:</lable><br>
+    <input type="checkbox" id="Online" value="Online">
+    <lable>Online</lable><br>
+    <input type="checkbox" id="In-person" value="In-person">
+    <lable>In-person</lable><br>
+    <input type="checkbox" id="Hybrid" value="Hybrid">
+    <lable>Hybrid</lable>
+</fieldset>
+<fieldset>
+    <legend>Additional Details</legend>
+    <label> why do you want to join this course?</label>
+    <textarea cols="30" rows="5"></textarea>
+</fieldset>
+<button type="submit">submit</button>
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

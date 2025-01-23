@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="Personal%20Portfolio_files/external.css">
+</head>
+<body>
+<header><h2 id="money">Welcome to my portfolio</h2>
+<nav>
+    <ul>
+         <li><a href="#about">About me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact me</a></li>
+    </ul>
+</nav>
+</header>
+
+<section id="about">
+<h3>ABOUT ME</h3>
+<p>lets get started again do not how many times i have written my about 
+my and it  is now getting tiring.if u want to know refer to my first  
+html file</p>
+</section>
+<section id="skills">
+<h2>my skills</h2>
+<ul id="re">
+    <li> html</li>
+    <li>Css</li>
+    <li>bootstrap</li>
+</ul>
+</section>
+<section id="project">
+<h2>My Project</h2>
+<h3>Project1: personal websites</h3>
+<p>This projects showase my skills in HTML and</p>
+<h3>PROJECT 2:portfolio website</h3>
+<p>This project showcase my skills in design</p>
+</section>
+<section id="contact">
+<h2>My contacts</h2>
+<form>
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="number">phone Number</label>
+        <input type="number" id="number" name="number"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <label>Tell me someting:</label><br>
+        <textarea cols="30" rows="8" placeholder="write your message here"></textarea>
+        <button type="submit">submit</button>
+    </fieldset>
+</form>
+</section>
+<footer>
+    <a href="https://www.twitter.com/" target="_blank"><img src="Personal%20Portfolio_files/x.png" height="30" width="30"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="Personal%20Portfolio_files/ig3.jpeg" height="30" width="30"></a>
+  <a href="https://www.facebook.com/" target="_blank"><img src="Personal%20Portfolio_files/facebook.png" height="30" width="30"></a>
+<p>© 2025 coding project</p>
+</footer>
+
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

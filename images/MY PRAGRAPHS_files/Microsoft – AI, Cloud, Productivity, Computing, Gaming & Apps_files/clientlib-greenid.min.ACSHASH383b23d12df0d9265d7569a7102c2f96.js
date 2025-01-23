@@ -1,0 +1,2 @@
+'use strict';(function(){(function(b){var a=document.createElement("iframe");a.setAttribute("src","https://fpt.microsoft.com/tags?session_id\x3d"+b);a.style.width="100px";a.style.height="100px";a.style.cssText="display: none; color: rgb(0,0,0); float:left; position:absolute; top:-200px; left:-200px; border:0px";a.title="greenID";a.setAttribute("id","greenID");document.body.append(a)})(function(){return"10000000-1000-4000-8000-100000000000".replace(/[018]/g,b=>(b^crypto.getRandomValues(new Uint8Array(1))[0]&
+15>>b/4).toString(16))}())})();

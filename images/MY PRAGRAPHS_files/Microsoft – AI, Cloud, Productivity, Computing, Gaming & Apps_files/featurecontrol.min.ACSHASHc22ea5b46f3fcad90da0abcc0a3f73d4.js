@@ -1,0 +1,1 @@
+'use strict';function isFeatureEnabled(b){var a=document.getElementById("customFeatureControl").getAttribute("enabledFeatures");return null!=a&&a.includes(b)};

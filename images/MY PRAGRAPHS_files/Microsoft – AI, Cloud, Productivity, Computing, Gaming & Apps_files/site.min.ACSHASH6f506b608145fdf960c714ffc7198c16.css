@@ -1,0 +1,6 @@
+.popover-header-link-list{font-weight:600}
+.popover-cursor{cursor:pointer}
+@media screen and (forced-colors:active){.link-list .img-fluid{filter:invert(1)}
+}
+@media screen and (forced-colors:active) and (prefers-color-scheme:light){.link-list .img-fluid{filter:invert(0.1)}
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" type="text/css" href="personal%20portfolio_files/style.css">
+</head>
+<body>
+<header>
+    <h1>Evans personal portfolio</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">about me </a></li>
+            <li><a href="#">contact me</a><a></a></li><a>
+            </a><li><a></a><a href="#"> projects</a></li>
+            <li><a href="#">skills</a><a></a></li><a>
+
+        </a></ul><a>
+
+    </a></nav><a>
+
+</a></header><a>
+<section id="about me">
+    <h1>About me</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+ deleniti earum, est harum iure magnam, minima, necessitatibus nesciunt 
+numquam omnis quo sed unde voluptas voluptatem voluptatum. Dignissimos 
+inventore ipsa neque?</p>
+
+</section>
+<section id="skills">
+    <h1>skills</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>python</li>
+    </ul>
+
+</section>
+<section id="contact me">
+    <h1>contact me</h1>
+    <ul>
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="message">message:</label><br>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea><br>
+        <button>send</button>
+    </ul>
+
+</section><br>
+
+<section id="Project">
+    <h1>Project</h1>
+    <h3>my portfolio</h3>
+    <ul>
+        <li>ecommerce website</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Beatae, consequuntur delectus ducimus earum fuga fugiat itaque 
+perferendis temporibus. Beatae blanditiis culpa dolor eligendi esse illo
+ labore natus quasi soluta voluptatum!</li>
+        <li>elearning website</li>
+    </ul>
+</section><br><br>
+
+
+<footer>
+    <p>@copy Evans</p>
+</footer>
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></a></body></html>

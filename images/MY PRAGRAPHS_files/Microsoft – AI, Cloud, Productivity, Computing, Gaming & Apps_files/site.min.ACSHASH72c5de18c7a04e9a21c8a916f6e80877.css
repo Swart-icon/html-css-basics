@@ -1,0 +1,5 @@
+@media screen and (max-width:860px){.highlight .card-foreground .link-group a.cta{margin-left:5px}
+}
+.highlight .sr-text{border:0;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal !important}
+.highlight .btn-xbox-green{background-color:#107c10;color:#fff !important}
+html[dir="rtl"] .glyph-play::before,html[dir="rtl"] .glyph-prepend-play::before{transform:rotate(180deg)}

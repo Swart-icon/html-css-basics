@@ -1,0 +1,1 @@
+'use strict';var DynamicClientSideScriptHandler=function(){return{fetchScriptLink:function(b){var a=(a=document.querySelector('div[data-identifier\x3d"'+b+'"]'))?a.getAttribute("data-content"):null;null===a&&(a=(b=document.querySelector('meta[name\x3d"'+b+'"]'))?b.getAttribute("content"):null);return a}}}();

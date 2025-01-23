@@ -1,0 +1,8 @@
+/*!
+	To avoid conflict with MWF styles, added a wrapper class.
+ */.ump-container{max-width:100%}
+.ump-sm{width:800px}
+.ump-md{width:1200px}
+.ump-lg{width:1600px}
+.ump-xl{width:1920px}
+.ump-fill{height:100%}
